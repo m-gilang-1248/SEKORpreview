@@ -19,32 +19,32 @@ Berikut adalah pratinjau dari masing-masing halaman utama dalam aplikasi:
 ### 1. Halaman Beranda (Home)
 Halaman utama tempat pengguna memilih jenis olahraga yang ingin dimainkan. Terdapat header dengan informasi aplikasi dan avatar pengguna, serta daftar olahraga yang disajikan dalam bentuk kartu yang menarik.
 
-
+![Tampilan Halaman Beranda](https://via.placeholder.com/375x812.png?text=Halaman+Beranda)
 
 ### 2. Halaman Setup Pertandingan (Match Setup)
 Setelah memilih olahraga, pengguna akan diarahkan ke halaman ini untuk memasukkan nama kedua tim yang akan bertanding.
 
-
+![Tampilan Halaman Setup Pertandingan](https://via.placeholder.com/375x812.png?text=Halaman+Setup)
 
 ### 3. Halaman Papan Skor (Scoreboard)
 Ini adalah halaman inti tempat pencatatan skor berlangsung. Pengguna dapat menambah atau mengurangi skor untuk masing-masing tim, mengontrol timer, dan mengakhiri pertandingan. Terdapat juga petunjuk perhitungan poin sesuai genre olahraga yang dipilih.
 
-
+![Tampilan Halaman Papan Skor](https://via.placeholder.com/375x812.png?text=Papan+Skor)
 
 ### 4. Halaman Riwayat (History)
 Menampilkan daftar semua pertandingan yang telah diselesaikan. Setiap entri menunjukkan tim yang bertanding, skor akhir, tanggal, dan durasi pertandingan.
 
-
+![Tampilan Halaman Riwayat](https://via.placeholder.com/375x812.png?text=Halaman+Riwayat)
 
 ### 5. Halaman Detail Riwayat (History Detail)
 Menampilkan ringkasan statis dari satu pertandingan yang dipilih dari halaman riwayat.
 
-
+![Tampilan Halaman Detail Riwayat](https://via.placeholder.com/375x812.png?text=Detail+Riwayat)
 
 ### 6. Halaman Pengaturan (Settings)
 Halaman untuk konfigurasi aplikasi, seperti mode tampilan (contoh) dan informasi langganan (placeholder).
 
-
+![Tampilan Halaman Pengaturan](https://via.placeholder.com/375x812.png?text=Halaman+Pengaturan)
 
 ---
 
