@@ -19,7 +19,7 @@ Berikut adalah pratinjau dari masing-masing halaman utama dalam aplikasi:
 ### 1. Halaman Beranda (Home)
 Halaman utama tempat pengguna memilih jenis olahraga yang ingin dimainkan. Terdapat header dengan informasi aplikasi dan avatar pengguna, serta daftar olahraga yang disajikan dalam bentuk kartu yang menarik.
 
-![Tampilan Halaman Beranda](https://i.postimg.cc/k47v7V4f/1-Home.png)
+![Tampilan Halaman Beranda](https://drive.google.com/file/d/1g-dQl4IYC4mnoWpgktZI2dX6SJau923K/view?usp=drive_link)
 
 ### 2. Halaman Setup Pertandingan (Match Setup)
 Setelah memilih olahraga, pengguna akan diarahkan ke halaman ini untuk memasukkan nama kedua tim yang akan bertanding.
