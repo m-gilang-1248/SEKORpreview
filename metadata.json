@@ -1,0 +1,5 @@
+{
+  "name": "Aplikasi Papan Skor Pribadi",
+  "description": "Alat untuk membuat dan mencatat skor pertandingan pribadi Anda secara manual, dengan papan skor interaktif dan riwayat pertandingan.",
+  "requestFramePermissions": []
+}
