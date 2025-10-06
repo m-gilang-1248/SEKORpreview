@@ -1,26 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF--8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aplikasi Papan Skor</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- 1. Muat skrip Babel Standalone -->
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    <script type="importmap">
-{
-  "imports": {
-    "react": "https://aistudiocdn.com/react@^19.2.0",
-    "react-dom/client": "https://aistudiocdn.com/react-dom@^19.2.0/client",
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
-    "react/": "https://aistudiocdn.com/react@^19.2.0/"
-  }
-}
-</script>
-</head>
-  <body class="bg-gray-800">
-    <div id="root"></div>
-    <!-- 2. Ubah tipe skrip menjadi "text/babel" agar Babel dapat memprosesnya -->
-    <script type="text/babel" data-type="module" src="/index.tsx"></script>
+    <style>
+      /* Custom styles to hide/show screens */
+      .screen {
+        display: none;
+        height: 100%;
+        width: 100%;
+        overflow-y: auto;
+      }
+      .screen.active {
+        display: block;
+      }
+      /* Custom styles for toggle switch in settings */
+      .toggle-checkbox:checked {
+        right: 0;
+        border-color: #4A90E2;
+      }
+      .toggle-checkbox:checked + .toggle-label {
+        background-color: #4A90E2;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-800 font-sans">
+    <div class="min-h-screen flex items-center justify-center p-4">
+      <div class="relative mx-auto border-gray-800 dark:border-gray-800 bg-gray-800 border-[14px] rounded-[60px] shadow-xl">
+        <div class="w-[375px] h-[812px] dark:bg-gray-900 overflow-hidden rounded-[46px]">
+          <div id="app-container" class="relative h-full w-full">
+            <!-- App content will be injected here by JavaScript -->
+          </div>
+        </div>
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[140px] h-[36px] bg-gray-900 rounded-b-3xl"></div>
+        <div class="absolute -left-[17px] top-[148px] rounded-l-lg h-[94px] w-[3px] bg-gray-600"></div>
+        <div class="absolute -left-[17px] top-[252px] rounded-l-lg h-[94px] w-[3px] bg-gray-600"></div>
+        <div class="absolute -right-[17px] top-[182px] rounded-r-lg h-[164px] w-[3px] bg-gray-600"></div>
+      </div>
+    </div>
+    <script src="/index.js"></script>
   </body>
 </html>
