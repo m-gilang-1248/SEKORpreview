@@ -1,11 +1,5 @@
-import { Sport } from './types';
 
-export interface SportInfo {
-  name: Sport;
-  imageUrl: string;
-}
-
-export const supportedSports: SportInfo[] = [
+export const supportedSports = [
   {
     name: 'Futsal',
     imageUrl: 'https://images.unsplash.com/photo-1552667466-07770ae110d0?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=600',

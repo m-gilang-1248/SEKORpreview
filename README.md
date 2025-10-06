@@ -1,3 +1,4 @@
+
 # Aplikasi Papan Skor Pribadi
 
 Aplikasi ini adalah alat bantu sederhana namun fungsional untuk membuat dan mencatat skor pertandingan olahraga pribadi Anda secara manual. Lupakan kertas dan pensil, catat skor Futsal, Basket, atau Bulu Tangkis Anda dengan mudah melalui papan skor interaktif dan simpan riwayatnya.
@@ -50,7 +51,9 @@ Halaman untuk konfigurasi aplikasi, seperti mode tampilan (contoh) dan informasi
 
 ## Cara Menjalankan Proyek
 
-Proyek ini adalah aplikasi web statis yang dibuat dengan React dan TypeScript, sehingga tidak memerlukan proses _build_ yang kompleks untuk menjalankannya. Anda hanya perlu menyajikan file-file ini menggunakan server web lokal.
+Proyek ini adalah aplikasi web statis yang dibuat dengan React, TypeScript, dan JSX. Kode sumber dalam repositori ini **sudah ditranspilasi** ke dalam JavaScript standar yang dapat dijalankan langsung di browser. Anda tidak memerlukan proses build atau kompilasi tambahan.
+
+Anda hanya perlu menyajikan file-file ini menggunakan server web lokal.
 
 **Prasyarat:**
 - Anda memiliki [Node.js](https://nodejs.org/) terinstal (untuk menggunakan `npx`).
@@ -88,7 +91,7 @@ Proyek ini adalah aplikasi web statis yang dibuat dengan React dan TypeScript, s
 │   └── SettingsScreen.tsx
 ├── App.tsx              # Komponen utama yang mengatur state dan navigasi
 ├── data.ts              # Data statis aplikasi (daftar olahraga)
-├── types.ts             # Definisi tipe TypeScript
+├── types.ts             # Definisi tipe TypeScript (kosong setelah transpilasi)
 ├── index.html           # File HTML utama (entry point)
 ├── index.tsx            # Skrip utama untuk me-render aplikasi React
 └── README.md            # Dokumentasi ini
