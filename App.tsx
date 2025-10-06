@@ -1,4 +1,3 @@
-
 import React, { useState, useCallback } from 'react';
 import HomeScreen from './screens/HomeScreen.tsx';
 import HistoryScreen from './screens/HistoryScreen.tsx';
@@ -8,7 +7,7 @@ import ScoreboardScreen from './screens/ScoreboardScreen.tsx';
 import HistoryDetailScreen from './screens/HistoryDetailScreen.tsx';
 import BottomNavBar from './components/BottomNavBar.tsx';
 
-// FIX: Define types for game history and page state to resolve type errors.
+// FIX: Define types for game history and page state to resolve TypeScript errors.
 interface Game {
   id: string;
   sport: string;
@@ -25,9 +24,7 @@ type PageState =
   | { name: 'history-detail'; game: Game };
 
 const App = () => {
-  // FIX: Explicitly type the page state with the PageState union type.
   const [page, setPage] = useState<PageState>({ name: 'main', screen: 'home' });
-  // FIX: Explicitly type the history state as an array of Game objects.
   const [history, setHistory] = useState<Game[]>([]);
 
   const handleSelectSport = useCallback((sport: string) => {
