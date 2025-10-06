@@ -2,11 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aplikasi Papan Skor</title>
     <script src="https://cdn.tailwindcss.com"></script>
-  <script type="importmap">
+    <!-- 1. Muat skrip Babel Standalone -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="importmap">
 {
   "imports": {
     "react": "https://aistudiocdn.com/react@^19.2.0",
@@ -19,6 +20,7 @@
 </head>
   <body class="bg-gray-800">
     <div id="root"></div>
-    <script type="module" src="/index.tsx"></script>
+    <!-- 2. Ubah tipe skrip menjadi "text/babel" agar Babel dapat memprosesnya -->
+    <script type="text/babel" data-type="module" src="/index.tsx"></script>
   </body>
 </html>

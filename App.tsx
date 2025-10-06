@@ -7,16 +7,17 @@ import ScoreboardScreen from './screens/ScoreboardScreen.tsx';
 import HistoryDetailScreen from './screens/HistoryDetailScreen.tsx';
 import BottomNavBar from './components/BottomNavBar.tsx';
 
-// FIX: Define types for game history and page state to resolve TypeScript errors.
-interface Game {
+// Fix: Define a type for a single game history entry.
+type Game = {
   id: string;
   sport: string;
   teamA: { name: string; score: number };
   teamB: { name: string; score: number };
   date: string;
   durationSeconds: number;
-}
+};
 
+// Fix: Define a discriminated union for the page state to handle different page structures.
 type PageState =
   | { name: 'main'; screen: 'home' | 'history' | 'settings' }
   | { name: 'match-setup'; sport: string }
@@ -24,7 +25,9 @@ type PageState =
   | { name: 'history-detail'; game: Game };
 
 const App = () => {
+  // Fix: Apply the PageState type to the page state.
   const [page, setPage] = useState<PageState>({ name: 'main', screen: 'home' });
+  // Fix: Apply the Game[] type to the history state.
   const [history, setHistory] = useState<Game[]>([]);
 
   const handleSelectSport = useCallback((sport: string) => {
@@ -98,7 +101,7 @@ const App = () => {
         React.createElement('div', { className: "w-[375px] h-[812px] dark:bg-gray-900 overflow-hidden rounded-[46px]" },
           React.createElement('div', { className: "relative h-full w-full" },
             renderPage(),
-            showNavBar && (
+            showNavBar && page.name === 'main' && (
               React.createElement(BottomNavBar, { activeScreen: page.screen, setActiveScreen: setActiveScreen })
             )
           )
