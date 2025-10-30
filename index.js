@@ -21,27 +21,25 @@ const supportedSports = [
   },
 ];
 
-// --- STATE MANAGEMENT ---
-const state = {
-  currentPage: 'home', // home, match-setup, scoreboard, history, settings, history-detail
-  activeMainScreen: 'home', // for bottom nav bar state
-  selectedSport: null,
-  match: {
-    teamA: '',
-    teamB: '',
-    scoreA: 0,
-    scoreB: 0,
-    timer: 0,
-    isTimerRunning: false,
-  },
-  history: [],
-  selectedGame: null,
-  timerInterval: null,
+// --- UTILITY FUNCTIONS ---
+const saveHistoryToLocalStorage = (history) => {
+  try {
+    localStorage.setItem('scoreboardHistory', JSON.stringify(history));
+  } catch (error) {
+    console.error("Could not save history to local storage", error);
+  }
 };
 
-const appContainer = document.getElementById('app-container');
+const loadHistoryFromLocalStorage = () => {
+  try {
+    const historyJson = localStorage.getItem('scoreboardHistory');
+    return historyJson ? JSON.parse(historyJson) : [];
+  } catch (error) {
+    console.error("Could not load history from local storage", error);
+    return [];
+  }
+};
 
-// --- UTILITY FUNCTIONS ---
 const formatTime = (seconds) => {
   const mins = Math.floor(seconds / 60).toString().padStart(2, '0');
   const secs = (seconds % 60).toString().padStart(2, '0');
@@ -58,6 +56,26 @@ const getScoringHint = (sport) => {
         default: return "";
     }
 }
+
+// --- STATE MANAGEMENT ---
+const state = {
+  currentPage: 'home', // home, match-setup, scoreboard, history, settings, history-detail
+  activeMainScreen: 'home', // for bottom nav bar state
+  selectedSport: null,
+  match: {
+    teamA: '',
+    teamB: '',
+    scoreA: 0,
+    scoreB: 0,
+    timer: 0,
+    isTimerRunning: false,
+  },
+  history: loadHistoryFromLocalStorage(),
+  selectedGame: null,
+  timerInterval: null,
+};
+
+const appContainer = document.getElementById('app-container');
 
 // --- RENDER FUNCTIONS (HTML TEMPLATES) ---
 
@@ -464,6 +482,7 @@ const attachEventListeners = () => {
                     durationSeconds: state.match.timer,
                 };
                 state.history.unshift(newGame);
+                saveHistoryToLocalStorage(state.history);
                 state.currentPage = 'history';
                 state.activeMainScreen = 'history';
                 render();
