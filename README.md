@@ -49,50 +49,14 @@ Halaman untuk konfigurasi aplikasi, seperti mode tampilan (contoh) dan informasi
 
 ---
 
-## Cara Menjalankan Proyek
+## Cara Menjalankan Aplikasi
 
-Proyek ini adalah aplikasi web statis yang dibuat dengan React, TypeScript, dan JSX. Kode sumber dalam repositori ini **sudah ditranspilasi** ke dalam JavaScript standar yang dapat dijalankan langsung di browser. Anda tidak memerlukan proses build atau kompilasi tambahan.
-
-Anda hanya perlu menyajikan file-file ini menggunakan server web lokal.
-
-**Prasyarat:**
-- Anda memiliki [Node.js](https://nodejs.org/) terinstal (untuk menggunakan `npx`).
+Aplikasi ini sepenuhnya statis dan tidak memerlukan server web atau proses build apa pun untuk menjalankannya. Cukup buka file `index.html` langsung di peramban web Anda.
 
 **Langkah-langkah:**
 
-1.  **Buka Terminal**
-    Buka terminal atau command prompt Anda dan arahkan ke direktori utama proyek ini (folder yang berisi file `index.html`).
+1.  Unduh atau klon repositori ini ke komputer lokal Anda.
+2.  Buka direktori proyek.
+3.  Cari file `index.html` dan buka menggunakan peramban web modern (seperti Google Chrome, Firefox, atau Safari). Anda bisa mengklik dua kali file tersebut.
 
-2.  **Jalankan Server Lokal**
-    Cara termudah adalah menggunakan paket `serve`. Jalankan perintah berikut di terminal:
-    ```bash
-    npx serve .
-    ```
-    Perintah ini akan secara otomatis mengunduh paket `serve` (jika belum ada) dan menjalankannya di direktori saat ini.
-
-3.  **Buka di Browser**
-    Setelah server berjalan, terminal akan menampilkan alamat URL lokal, biasanya seperti `http://localhost:3000`. Buka alamat tersebut di browser web Anda untuk melihat aplikasi berjalan.
-
----
-
-## Struktur Proyek
-
-```
-.
-├── components/          # Komponen UI yang dapat digunakan kembali
-│   ├── icons/           # Komponen ikon SVG
-│   └── BottomNavBar.tsx # Komponen navigasi bawah
-├── screens/             # Komponen untuk setiap halaman/layar aplikasi
-│   ├── HomeScreen.tsx
-│   ├── MatchSetupScreen.tsx
-│   ├── ScoreboardScreen.tsx
-│   ├── HistoryScreen.tsx
-│   ├── HistoryDetailScreen.tsx
-│   └── SettingsScreen.tsx
-├── App.tsx              # Komponen utama yang mengatur state dan navigasi
-├── data.ts              # Data statis aplikasi (daftar olahraga)
-├── types.ts             # Definisi tipe TypeScript (kosong setelah transpilasi)
-├── index.html           # File HTML utama (entry point)
-├── index.tsx            # Skrip utama untuk me-render aplikasi React
-└── README.md            # Dokumentasi ini
-```
+Itu saja! Aplikasi akan dimuat dan siap digunakan secara offline langsung di browser Anda. Semua data pertandingan disimpan secara lokal di peramban Anda.
